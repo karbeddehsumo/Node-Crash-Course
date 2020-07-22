@@ -1,0 +1,22 @@
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+    <body>
+        
+        <%- include('../partials/nav.ejs') %>
+
+        <div class="details content">
+            <h2><%= blog.title %></h2>
+            <div class="content" >
+                <p><%= blog.body %></p>
+            </div>
+                <form action="/ideas/<%= blog._id %>?_method=PUT" method="post">
+                    <input type="hidden" name="_method" value="PUT">
+                    <button type="submit">Submit</button>
+                    </form>
+        </div>
+        <%- include('../partials/footer.ejs') %>
+
+    
+    </body>
+
+</html>
